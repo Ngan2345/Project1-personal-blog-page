@@ -1,0 +1,191 @@
+/*Import Background colour, Font, Link Stylesheet*/
+@import url(Colour.css);
+@import url(Text.css);
+@import url(Link.css);
+
+/*Mobile first*/
+.container {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 15vw 25vw 100vw 270vw 10vw;
+    grid-template-areas:
+    "topRight topRight topRight"
+    "topLeft topLeft topLeft"
+    "secondRight secondRight secondRight"
+    "secondLeft secondLeft secondLeft "
+    "ft ft ft";
+    grid-gap: 1.5vw;
+}
+.box {
+    font: 5.5vw "Futura PT", "Roboto", "Roboto Condense", "Open Sans", sans-serif;
+    justify-content: center;
+    text-align: left;
+    color: #555555;
+    padding: 0;
+}
+.photo {
+    height: auto;
+    width: auto;
+}
+#top {
+    font: 3.5vw "Futura PT", "Roboto", "Roboto Condense", "Open Sans", sans-serif;
+    grid-area: topLeft;
+    justify-content: center;
+    text-align: center;
+    width: 84vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+#menu {
+    font-size: 3.8vw;
+    grid-area: topRight;
+    justify-content: center;
+    text-align: right;
+    width: 84vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+#picture {
+    grid-area: secondRight;
+    justify-content: center;
+    text-align: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+#nestedSquare {
+    height: 84vw;
+    width: 84vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+#intro {
+    grid-area: secondLeft;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 84vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font: 3.8vw "Futura PT", "Roboto", "Roboto Condense", "Open Sans", sans-serif;
+    color:#555555;
+}
+#one {
+    order:1;
+    background-image: url(Images/Notebook.jpg);
+    background-size: contain;
+}
+#two {
+    order:2;
+    background-image: url(Images/Planner.jpg);
+    background-size: contain;
+}
+#three {
+    order:3;
+    background-image: url(Images/Bookmark.jpg);
+    background-size: contain;
+}
+#four {
+    order:4;
+    background-image: url(Images/Book.jpg);
+    background-size: contain;
+}
+#me1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start + safe;
+}
+#me2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start + safe;
+}
+#footer {
+    grid-area: ft;
+    width: 84vw;
+    justify-content: center;
+    align-items:baseline;
+    text-align: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-size: 3.7vw;
+}
+
+/* Medium Screens */ 
+@media(min-width:540px) and (max-width:900px) {
+    .container {
+        grid-template-rows: 15vw 20vw 100vw 130vw 10vw;
+    }
+    .box {
+        font-size: 3.2vw;
+    }
+    #top {
+        font-size: 2.8vw;
+    }
+    #menu {
+        font-size: 2.5vw;
+    }
+    #footer {
+        font-size: 3.5vw;
+    }
+}
+
+/* Large Screens */    
+@media(min-width:901px) {
+    .container{
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+        grid-template-rows: 10vw 70vw 3vw;
+        grid-template-areas:
+        "topLeft topLeft topLeft topRight topRight topRight"
+        "secondLeft secondLeft secondLeft secondRight secondRight secondRight"
+        "ft ft ft ft ft ft";
+        grid-gap: 0.5vw;
+    }
+    #intro {
+        font-size: 1vw;
+        text-align: left;
+        width: 43vw;
+        padding-left: 0;
+        margin-bottom: 1vw;
+    }
+    #top {
+        font-size: 1.4vw;
+        text-align: left;
+        width: 40vw;
+        padding: 0;
+    }
+    #menu {
+        font-size: 1.4vw;
+        text-align: right;
+        justify-content:right;
+        width: 37vw;
+        padding: 0;
+    }
+    #picture {
+        grid-area: secondRight;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #nestedSquare {
+        height: 37vw;
+        width: 37vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    #me1 {
+        font-size: 1.75vw;
+    }
+    #me2 {
+        font-size: 1.75vw;
+    }
+    #footer {
+        font-size: 1.5vw;
+    }
+}

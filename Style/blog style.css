@@ -1,0 +1,254 @@
+/*Import Background colour, Font, Link Stylesheet*/
+@import url(Colour.css);
+@import url(Text.css);
+@import url(Link.css);
+
+/*Mobile first*/
+.container {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 15vw 25vw 100vw 60vw 80vw 125vw 130vw 125vw 10vw;
+    grid-template-areas:
+    "topRight topRight topRight"
+    "topLeft topLeft topLeft"
+    "secondRight secondRight secondRight"
+    "secondLeft secondLeft secondLeft"
+    "third third third"
+    "one one one"
+    "two two two"
+    "three three three"
+    "ft ft ft";
+    grid-gap: 1.5vw;
+}
+.box {
+    font: 5.5vw "Futura PT", "Roboto", "Roboto Condense", "Open Sans", sans-serif;
+    justify-content: center;
+    text-align: center;
+    color: #555555;
+    padding: 0;
+}
+.postbox {
+    background-color:#f1b2b5;
+    font: 4.6vw "Futura PT", "Roboto", "Roboto Condense", "Open Sans", sans-serif;
+    justify-content: space-around;
+    text-align: center;
+    color: #555555;
+    padding: 0;
+}
+#top {
+    font: 3.5vw "Futura PT", "Roboto", "Roboto Condense", "Open Sans", sans-serif;
+    grid-area: topLeft;
+    justify-content: center;
+    text-align: center;
+    width: 84vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+#menu {
+    font-size: 3.8vw;
+    grid-area: topRight;
+    justify-content: center;
+    text-align: right;
+    width: 84vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+#picture {
+    grid-area: secondLeft;
+    justify-content: center;
+    text-align: center;
+    width: 80vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+#intro {
+    grid-area: secondRight;
+    width: 84vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font: 6vw "Futura PT", "Roboto", "Roboto Condense", "Open Sans", sans-serif;
+    color:#555555;
+}
+#introline {
+    grid-area: third;
+    text-align: center;
+    width: 84vw;
+    padding-top: 5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font: 5vw "Roboto Condense", "Roboto", "Open Sans", sans-serif;
+    color: #556666;
+}
+#one {
+    grid-area: one;
+    width: 70vw;
+    padding: 2vw;
+    margin-left: 8vw;
+    margin-right: 10vw;
+    margin-bottom: 2vw;
+}
+#two {
+    grid-area: two;
+    width: 70vw;
+    padding: 2vw;
+    margin-left: 8vw;
+    margin-right: 10vw;
+    margin-bottom: 2vw;
+}
+#three {
+    grid-area: three;
+    width: 70vw;
+    padding: 2vw;
+    margin-left: 8vw;
+    margin-right: 10vw;
+    margin-bottom: 2vw;
+}
+#footer {
+    grid-area: ft;
+    width: 84vw;
+    justify-content: center;
+    text-align: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-size: 3.7vw;
+}
+
+/* Medium Screens */ 
+@media(min-width:540px) and (max-width:900px) {
+    .container {
+        grid-template-rows: 15vw 20vw 50vw 60vw 40vw 105vw 110vw 105vw 10vw;
+    }
+    #top {
+        font-size: 2.8vw;
+    }
+    #menu {
+        font-size: 2.5vw;
+    }
+    #intro {
+        font-size: 3.8vw;
+    }
+    #introline {
+        font-size: 3vw;
+    }
+    .postbox {
+        font-size: 3.3vw;
+    }
+    #one {
+        grid-area: one;
+        width: 60vw;
+        padding: 2vw;
+        margin-left: 14vw;
+        margin-right: 14vw;
+        margin-bottom: 2vw;
+    }
+    #two {
+        grid-area: two;
+        width: 60vw;
+        padding: 2vw;
+        margin-left: 14vw;
+        margin-right: 14vw;
+        margin-bottom: 2vw;
+    }
+    #three {
+        grid-area: three;
+        width: 60vw;
+        padding: 2vw;
+        margin-left: 14vw;
+        margin-right: 14vw;
+        margin-bottom: 2vw;
+    }
+    #footer {
+        font-size: 3.5vw;
+    }
+}
+
+/* Large Screens */
+@media(min-width: 901px) {
+    .container{
+        display: grid;
+        margin: auto;
+        grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+        grid-template-rows: 10vw 28vw 20vw 42vw 3vw;
+        grid-template-areas: 
+        "topLeft topLeft topLeft topRight topRight topRight"
+        "secondLeft secondLeft secondLeft secondRight secondRight secondRight"
+        "third third third third third third "
+        "one one two two three three"
+        "ft ft ft ft ft ft";
+        grid-gap: 0.5vw;
+    }
+    .postbox {
+        font-size: 1.2vw;
+    }
+    .box {
+        font-size: 1.2vw;
+    }
+    #intro {
+        grid-area: secondRight;
+        text-align: left;
+        justify-content: left;
+        padding:0;
+        width: 45vw;
+        font-size: 2.2vw;
+        color:#555555;
+        font-family: "Futura PT", "Roboto", "Open Sans", sans-serif;
+    }
+    #picture {
+        grid-area: secondLeft;
+        width: 40vw;
+        padding: 0;
+    }    
+    #introline {
+        grid-area: third;
+        width: 90vw;
+        margin-top: 5vw;
+        padding: 1vw;
+        font: 1.8vw "Roboto Condense", "Roboto", "Open Sans", sans-serif;
+        text-align: left;
+        color: #556666;
+    }
+    #top {
+        font-size: 1.4vw;
+        grid-area: topLeft;
+        justify-content: left;
+        text-align: left;
+        width: 90vw;
+        padding: 0;
+    }    
+    #menu {
+        text-align: right;
+        font-size: 1.4vw;
+        justify-content:right;
+        width:37vw;
+        padding: 0;
+    }
+    #one {
+        grid-area: one;
+        justify-content: center;
+        text-align: center;
+        width: 27vw;
+        padding: 1vw;
+        margin: 0;
+    }
+    #two {
+        grid-area: two;
+        justify-content: center;
+        text-align: center;
+        width: 27vw;
+        padding: 1vw;
+        margin: 0;
+    }
+    #three {
+        grid-area: three;
+        justify-content: center;
+        text-align: center;
+        width: 27vw;
+        padding: 1vw;
+        margin:0;
+    }
+    #footer {
+        font-size: 1.5vw;
+    }
+}

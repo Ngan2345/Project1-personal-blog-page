@@ -1,0 +1,14 @@
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 
+p {
+    color: #444444;
+    font-family: "Futura PT", "Roboto", "Roboto Condense", "Open Sans", sans-serif;
+}
+#me1 h3,
+#me2 h3 {
+    font-style: italic;
+}

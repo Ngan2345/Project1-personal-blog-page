@@ -1,0 +1,22 @@
+a {
+    color: #444444;
+}
+a:hover,
+a h2:hover,
+a p:hover {
+    color: #ee918d;
+    text-decoration: none;
+}
+a:link,
+a h2:link,
+a p:link {
+    color: #556666;
+    text-decoration: none;
+}
+#footer a:hover {
+    color: #0077b5;
+    text-decoration: none;
+}
+#name {
+    color: #ee918d;
+}
