@@ -13,4 +13,4 @@ In this project, I designed my personal blog from scratch.
 
 ## 3. How to navigate my blog
 - Download my files to your computer.  
-- Then open `My main page.html` with your browser to start navigating from my main page.
+- Then open `index.html` with your browser to start navigating from my main page.
